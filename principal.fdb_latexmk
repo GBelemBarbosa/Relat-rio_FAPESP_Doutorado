@@ -1,5 +1,13 @@
 # Fdb version 4
-["pdflatex"] 1770355234.27384 "/home/gggt4/TeX/Relatório científico/Relatório_FAPESP_Doutorado/principal.tex" "principal.pdf" "principal" 1770355239.24651 0
+["bibtex principal"] 1770356338.05624 "principal.aux" "principal.bbl" "principal" 1770356342.67221 0
+  "./bibliografia.bib" 1770353952.90227 25420 1b914a76e159873a688257d9e565ccbe ""
+  "/usr/share/texlive/texmf-dist/bibtex/bst/base/abbrv.bst" 1292289607 20329 b5fed53e10044d0f8112183785c759b1 ""
+  "principal.aux" 1770356342.24077 6189 b28ed000cbde42a593f100abd6e4396e "pdflatex"
+  (generated)
+  "principal.bbl"
+  "principal.blg"
+  (rewritten before read)
+["pdflatex"] 1770356338.25521 "/home/gggt4/TeX/Relatório científico/Relatório_FAPESP_Doutorado/principal.tex" "principal.pdf" "principal" 1770356342.67237 0
   "/etc/texmf/web2c/texmf.cnf" 1760819206.02535 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/gggt4/TeX/Relatório científico/Relatório_FAPESP_Doutorado/principal.tex" 1770346248.78761 11836 f31d678bb5dcdd89c577033b9c1bc905 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -250,13 +258,14 @@
   "images/const_time.png" 1770337564.26775 271684 e06bc2ed4d9d64b7eec507bf81a0b0c6 ""
   "images/mixed_sim.png" 1770336642.37545 328379 8ff98971dd3cc099841656c6a123a36a ""
   "images/mixed_time.png" 1770336644.34338 238608 924e1c1ead74b2e383d1d799ee38899d ""
-  "principal.aux" 1770355239.03181 6174 59594e00f67cde34894bdb364cbfd047 "pdflatex"
-  "principal.out" 1770355239.03587 3353 ac2a53b9968768e73e5e4d3927ca0369 "pdflatex"
+  "principal.aux" 1770356342.24077 6189 b28ed000cbde42a593f100abd6e4396e "pdflatex"
+  "principal.bbl" 1770356338.22424 637 34d0d57488edb367513743be65beb5ab "bibtex principal"
+  "principal.out" 1770356342.24491 3353 ac2a53b9968768e73e5e4d3927ca0369 "pdflatex"
   "principal.tex" 1770346248.78761 11836 f31d678bb5dcdd89c577033b9c1bc905 ""
-  "principal.toc" 1770355239.03587 1566 2bd96ab7e4c53bf33e0e1c8571894d87 "pdflatex"
-  "realizacoes.tex" 1770355233.55492 9394 1025a1d760c67d0eb5369d13fe775fd3 ""
+  "principal.toc" 1770356342.24491 1566 2bd96ab7e4c53bf33e0e1c8571894d87 "pdflatex"
+  "realizacoes.tex" 1770356240.7114 9396 9ea33e69575dcec07dc17f0199ddd02c ""
   "rest.tex" 1770354471.44719 4028 016c4501963909b463c982553dca8356 ""
-  "resumo.tex" 1770346272.95935 1858 0b4ba6b44e1aca4a2c39757241e2eeb6 ""
+  "resumo.tex" 1770355870.66844 1549 447f6f1f89b9b6e35400c7364ec67365 ""
   (generated)
   "principal.aux"
   "principal.log"
@@ -264,5 +273,3 @@
   "principal.pdf"
   "principal.toc"
   (rewritten before read)
-  "principal.aux"
-  "principal.out"

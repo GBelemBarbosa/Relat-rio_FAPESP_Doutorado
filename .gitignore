@@ -1,1 +1,11 @@
-*.aux\n*.log\n*.out\n*.pdf\n*.synctex.gz\n*.toc\n*.bbl\n*.blg\n*.fdb_latexmk\n*.fls
+*.aux
+*.log
+*.out
+*.pdf
+*.synctex.gz
+*.toc
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+images/*.aux
