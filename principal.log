@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.18)  6 FEB 2026 02:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.18)  6 FEB 2026 02:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1104,22 +1104,22 @@ Cap\'{\i }tulo 2.
 <images/mixed_sim.png, id=139, 3613.5pt x 2409.0pt>
 File: images/mixed_sim.png Graphic file (type png)
 <use images/mixed_sim.png>
-Package pdftex.def Info: images/mixed_sim.png  used on input line 70.
+Package pdftex.def Info: images/mixed_sim.png  used on input line 72.
 (pdftex.def)             Requested size: 217.42265pt x 144.9381pt.
 <images/mixed_time.png, id=140, 3613.5pt x 2409.0pt>
 File: images/mixed_time.png Graphic file (type png)
 <use images/mixed_time.png>
-Package pdftex.def Info: images/mixed_time.png  used on input line 76.
+Package pdftex.def Info: images/mixed_time.png  used on input line 78.
 (pdftex.def)             Requested size: 217.42265pt x 144.9381pt.
 <images/const_sim.png, id=142, 3613.5pt x 2409.0pt>
 File: images/const_sim.png Graphic file (type png)
 <use images/const_sim.png>
-Package pdftex.def Info: images/const_sim.png  used on input line 90.
+Package pdftex.def Info: images/const_sim.png  used on input line 92.
 (pdftex.def)             Requested size: 217.42265pt x 144.9381pt.
 <images/const_time.png, id=143, 3613.5pt x 2409.0pt>
 File: images/const_time.png Graphic file (type png)
 <use images/const_time.png>
-Package pdftex.def Info: images/const_time.png  used on input line 96.
+Package pdftex.def Info: images/const_time.png  used on input line 98.
 (pdftex.def)             Requested size: 217.42265pt x 144.9381pt.
 ) (./rest.tex [4] [5 <./images/mixed_sim.png> <./images/mixed_time.png> <./images/const_sim.png> <./images/const_time.png>]
 Cap\'{\i }tulo 3.
@@ -1144,15 +1144,15 @@ Package rerunfilecheck Info: File `principal.out' has not changed.
 (rerunfilecheck)             Checksum: AC2A53B9968768E73E5E4D3927CA0369;3353.
  ) 
 Here is how much of TeX's memory you used:
- 33717 strings out of 474222
- 646409 string characters out of 5748732
- 1934975 words of memory out of 5000000
+ 33733 strings out of 474222
+ 646539 string characters out of 5748732
+ 1935975 words of memory out of 5000000
  55052 multiletter control sequences out of 15000+600000
- 626161 words of font info for 269 fonts, out of 8000000 for 9000
+ 628606 words of font info for 281 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,11n,93p,1818b,629s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1440.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on principal.pdf (14 pages, 1300803 bytes).
+Output written on principal.pdf (14 pages, 1301874 bytes).
 PDF statistics:
  237 PDF objects out of 1000 (max. 8388607)
  195 compressed objects within 2 object streams

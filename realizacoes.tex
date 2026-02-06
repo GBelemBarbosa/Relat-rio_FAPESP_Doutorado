@@ -13,13 +13,13 @@ No âmbito das exigências do programa de Doutorado em Matemática Aplicada do I
     \item Coeficiente de Rendimento (CR): O aluno mantém um CR perfeito de 4,0000;
     \item Disciplinas Cursadas no Doutorado (1º Semestre de 2025):
     \begin{itemize}
-        \item MT504 - Fluxos em Redes: Aprovado com conceito A;
-        \item MT853 - Tópicos em Otimização: Aprovado com conceito A;
+        \item MT504 — Fluxos em Redes: Aprovado com conceito A;
+        \item MT853 — Tópicos em Otimização: Aprovado com conceito A;
     \end{itemize}
-    \item Aproveitamento de Créditos: As disciplinas obrigatórias MT401 - Análise Aplicada e MT402 - Matrizes foram aproveitadas do Mestrado (registradas como MT801 e MT802 no 2º semestre de 2025), cumprindo os requisitos de créditos obrigatórios;
+    \item Aproveitamento de Créditos: As disciplinas obrigatórias MT401 — Análise Aplicada e MT402 — Matrizes foram aproveitadas do Mestrado (registradas como MT801 e MT802 no 2º semestre de 2025), cumprindo os requisitos de créditos obrigatórios;
     \item Total de Créditos: Foram totalizados 18 créditos no Doutorado (incluindo aproveitamentos), avançando significativamente rumo à integralização dos créditos exigidos pelo programa;
     \item Estágio Docente: Realização do Estágio de Capacitação Docente (PED C) na disciplina MS211 - Cálculo Numérico (código CD003), sob supervisão, durante o 2º semestre de 2025;
-    \item Exame de Proficiência em Inglês: Aprovação no Exame de Proficiência em Inglês II (Escrito), realizado em 30/05/2025;
+    \item Exame de Proficiência em inglês: Aprovação no Exame de Proficiência em Inglês II (Escrito), realizado em 30/05/2025;
     \item Exames de Qualificação:
     \begin{itemize}
         \item Aprovação no Exame de Qualificação na área de Análise Aplicada (MT401), realizado em 25/08/2025;
@@ -51,7 +51,7 @@ Foi realizada uma extensa campanha de experimentos e desenvolvimentos teóricos 
 \subsection{Estratégias Avançadas de Validação Cruzada}
 Implementamos e comparamos novas estratégias para a seleção do hiperparâmetro $\lambda$ ao longo do caminho de regularização, visando mitigar a convergência para mínimos locais ruins. Essa estratégia é particularmente essencial em contextos nos quais a esparsidade da verdade base (\textit{ground truth}) não é conhecida, como em problemas de seleção de variáveis em aprendizado de máquina.
 
-A primeira abordagem desenvolvida, denominada \emph{CV Inverso}, inverte a lógica padrão de percorrer o caminho de regularização. Ao invés de iniciar com $\lambda_{high}$ (solução esparsa) e relaxar a penalidade, esta estratégia percorre o caminho de $\lambda_{low}$ a $\lambda_{high}$, iniciando de soluções mais densas após uma fase de \textit{warmup}. Observamos que iniciar com o suporte cheio e remover variáveis progressivamente evita o custo combinatório de adicionar variáveis uma a uma e é particularmente robusto para métodos espectrais como o NSPG.
+A primeira abordagem desenvolvida, denominada \emph{CV Inverso}, inverte a lógica padrão de percorrer o caminho de regularização. Ao invés de iniciar com $\lambda_{high}$ (solução esparsa) e relaxar a penalidade, esta estratégia percorre o caminho de $\lambda_{low}$ a $\lambda_{high}$, iniciando de soluções mais densas após uma fase de \textit{warmup}. 
 
 Além disso, desenvolvemos o \emph{CV Adaptativo Inteligente}, uma abordagem híbrida que sonda os erros de validação nos dois extremos do intervalo de $\lambda$ e seleciona a melhor direção de varredura. O algoritmo permite ainda uma única reversão de direção caso detecte uma melhora significativa no erro de validação (maior que 1\%), permitindo explorar vales de mínimos locais que seriam ignorados por varreduras monotônicas rígidas. Esse critério também permite que o método termine mais rapidamente sem varrer por completo o \textit{range} de possíveis valores de $\lambda$, por vezes superando a padrão ou a inversa em velocidade.
 
