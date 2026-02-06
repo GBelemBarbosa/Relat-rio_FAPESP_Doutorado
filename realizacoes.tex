@@ -34,13 +34,13 @@ As atividades de pesquisa concentraram-se na investigação e aprimoramento de m
 \subsection{Definição do Problema e Notação}
 Considere o problema de regressão linear com ruído:
 \begin{equation} \label{P} \tag{P}
-    b = Ax + \epsilon,
+    y = Ax + \epsilon,
 \end{equation}
-onde $b \in \mathbb{R}^n$ é o vetor resposta e $A \in \mathbb{R}^{n \times p}$ é a matriz de desenho. O objetivo é recuperar o vetor de coeficientes $x \in \mathbb{R}^p$, assumindo que a solução verdadeira é esparsa (poucos coeficientes não nulos), uma hipótese comum e desejável em cenários onde $p \gg n$.
+onde $y \in \mathbb{R}^n$ é o vetor resposta e $A \in \mathbb{R}^{n \times p}$ é a matriz de desenho. O objetivo é recuperar o vetor de coeficientes $x \in \mathbb{R}^p$, assumindo que a solução verdadeira é esparsa (poucos coeficientes não nulos), uma hipótese comum e desejável em cenários onde $p \gg n$.
 
 Para impor essa esparsidade, abordamos o problema de regularização $\ell_0$:
 \begin{equation} \label{R} \tag{R}
-    \min_{x \in \mathbb{R}^p} \frac{1}{2} \|Ax - b\|_2^2 + \lambda \|x\|_0,
+    \min_{x \in \mathbb{R}^p} \frac{1}{2} \|Ax - y\|_2^2 + \lambda \|x\|_0,
 \end{equation}
 onde $\|x\|_0$ denota a pseudo-norma $\ell_0$ (cardinalidade do suporte de $x$) e $\lambda > 0$ é o parâmetro de regularização que controla o balanço entre o erro de ajuste e a esparsidade da solução.
 
@@ -53,7 +53,7 @@ Durante o texto, utilizamos a seguinte notação:
     \item O suporte do vetor $x$ é denotado por $\text{supp}(x) = \{i \in [p] : x_i \neq 0\}$.
 \end{itemize}
 
-O problema \eqref{R} é NP-difícil, o que motiva o desenvolvimento de algoritmos que combinem a eficiência de métodos contínuos com a qualidade de soluções de métodos combinatoriais.
+O problema \eqref{R} é NP-difícil \cite{fastselect}, o que motiva o desenvolvimento de algoritmos que combinem a eficiência de métodos contínuos com a qualidade de soluções de métodos combinatoriais.
 
 Os principais avanços incluem:
 
@@ -78,12 +78,12 @@ A primeira abordagem desenvolvida, denominada \emph{CV Inverso}, inverte a lógi
 Além disso, desenvolvemos o \emph{CV Adaptativo Inteligente}, uma abordagem híbrida que sonda os erros de validação nos dois extremos do intervalo de $\lambda$ e seleciona a melhor direção de varredura. O algoritmo permite ainda uma única reversão de direção caso detecte uma melhora significativa no erro de validação (maior que 1\%), permitindo explorar vales de mínimos locais que seriam ignorados por varreduras monotônicas rígidas. Esse critério também permite que o método termine mais rapidamente sem varrer por completo o intervalo de possíveis valores de $\lambda$, por vezes superando a padrão ou a inversa em velocidade.
 
 \subsection{Integração Híbrida e Escalamento Dinâmico}
-Para algoritmos baseados em passos espectrais, corriqueiramente empregados em métodos como o Gradiente Proximal Espectral Não-Monótono (NSPG) e sua variação de métrica variável (VMNSPG), a escala do passo $\gamma_{k,0}$ varia dinamicamente. Para garantir a consistência de seleção do operador proximal, implementamos um ajuste no caminho de regularização onde os valores de teste de $\lambda$ são compensados pela magnitude do passo espectral corrente. Isso assegura que o operador proximal aplique o limiar efetivo adequado, estabilizando a seleção do suporte.
+Para algoritmos baseados em passos espectrais, corriqueiramente empregados em métodos como o Gradiente Proximal Espectral Não-Monótono (NSPG) \cite{manuscrito} e sua variação de métrica variável (VMNSPG) \cite{vmspg}, a escala do passo $\gamma_{k,0}$ varia dinamicamente. Para garantir a consistência de seleção do operador proximal, implementamos um ajuste no caminho de regularização onde os valores de teste de $\lambda$ são compensados pela magnitude do passo espectral corrente. Isso assegura que o operador proximal aplique o limiar efetivo adequado, estabilizando a seleção do suporte.
 
-Essa técnica é fundamental para a estratégia híbrida desenvolvida, que combina as forças de diferentes classes de algoritmos em dois estágios. Na fase global, utilizamos o NSPG para escapar de mínimos locais rasos e identificar rapidamente um suporte razoável. Na fase local subsequente, estratégias de \textit{Coordinate Partial Swap} (CPSI) garantem otimalidade combinatorial de ordem superior. Também testamos o uso das soluções do NSPG como ponto de partida para o \textit{Partially Greedy Cyclic Coordinate Descent} (PGCCD) \cite{fastselect}, gerando um método híbrido. O PGCCD converge rapidamente para um mínimo de alta precisão, refinando os coeficientes no suporte identificado, antes da busca por otimalidade combinatorial.
+Essa técnica é fundamental para a estratégia híbrida desenvolvida, que combina as forças de diferentes classes de algoritmos em dois estágios. Na fase global, utilizamos o NSPG para escapar de mínimos locais rasos e identificar rapidamente um suporte razoável. Na fase local subsequente, estratégias de \textit{Coordinate Partial Swap} (CPSI) \cite{fastselect} garantem otimalidade combinatorial de ordem superior. Também testamos o uso das soluções do NSPG como ponto de partida para o \textit{Partially Greedy Cyclic Coordinate Descent} (PGCCD) \cite{fastselect}, gerando um método híbrido. O PGCCD converge rapidamente para um mínimo de alta precisão, refinando os coeficientes no suporte identificado, antes da busca por otimalidade combinatorial.
 
 \subsection{Resultados Preliminares}
-Para validar a eficácia dos métodos, utilizamos dados sintéticos gerados segundo o modelo linear $y = Ax + \epsilon$, onde $n$ denota o número de amostras, $p$ o número de parâmetros (variáveis) e $k^\dagger$ a dimensão do suporte da (\textit{ground truth}). A matriz de dados $A$ possui colunas normalizadas e estrutura de correlação controlada pelo parâmetro $\rho$ (correlação entre variáveis adjacentes com decaimento exponencial ou correlação constante). O nível de ruído é determinado pelo \textit{Signal to Noise Ratio} (SNR), que varia conforme a dificuldade do cenário analisado.
+Para validar a eficácia dos métodos, utilizamos dados sintéticos gerados segundo o modelo linear \eqref{P} definido anteriormente. A matriz de dados $A$ possui colunas normalizadas e estrutura de correlação controlada pelo parâmetro $\rho$ (correlação entre variáveis adjacentes com decaimento exponencial ou correlação constante). O nível de ruído é determinado pelo \textit{Signal to Noise Ratio} (SNR), que varia conforme a dificuldade do cenário analisado.
 
 A qualidade da solução recuperada é medida pela métrica de Similaridade do Suporte (Jaccard Modificado), definida como $J(S, S^\dagger) = \frac{|S \cap S^\dagger|}{\max\{|S|, |S^\dagger|\}}$, onde $S$ é o suporte estimado pelo algoritmo e $S^\dagger$ é o suporte verdadeiro (com $|S^\dagger|=k^\dagger$). Esta métrica varia de 0 (disjunção total) a 1 (recuperação perfeita).
 
