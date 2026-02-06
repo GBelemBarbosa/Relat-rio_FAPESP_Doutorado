@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex principal"] 1770357446.01898 "principal.aux" "principal.bbl" "principal" 1770357449.35608 0
-  "./bibliografia.bib" 1770353952.90227 25420 1b914a76e159873a688257d9e565ccbe ""
+["bibtex principal"] 1770404356.18319 "principal.aux" "principal.bbl" "principal" 1770404359.40879 0
+  "./bibliografia.bib" 1770403553.2309 26093 413638003635420b3e5ff3213d10477e ""
   "/usr/share/texlive/texmf-dist/bibtex/bst/base/abbrv.bst" 1292289607 20329 b5fed53e10044d0f8112183785c759b1 ""
-  "principal.aux" 1770357449.03033 5865 23d1355701360e622aa6abab87f2e0b0 "pdflatex"
+  "principal.aux" 1770404359.06163 6291 1b8d323ad50ce9352d4b803fbffc8975 "pdflatex"
   (generated)
   "principal.bbl"
   "principal.blg"
   (rewritten before read)
-["pdflatex"] 1770357446.17754 "/home/gggt4/TeX/Relatório científico/Relatório_FAPESP_Doutorado/principal.tex" "principal.pdf" "principal" 1770357449.35627 0
+["pdflatex"] 1770404356.32188 "/home/gggt4/TeX/Relatório científico/Relatório_FAPESP_Doutorado/principal.tex" "principal.pdf" "principal" 1770404359.40895 0
   "/etc/texmf/web2c/texmf.cnf" 1760819206.02535 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/gggt4/TeX/Relatório científico/Relatório_FAPESP_Doutorado/principal.tex" 1770357338.46676 11838 3e0a52f3c6d5a1b7eb41d461b9cc8c52 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -258,12 +258,12 @@
   "images/const_time.png" 1770337564.26775 271684 e06bc2ed4d9d64b7eec507bf81a0b0c6 ""
   "images/mixed_sim.png" 1770336642.37545 328379 8ff98971dd3cc099841656c6a123a36a ""
   "images/mixed_time.png" 1770336644.34338 238608 924e1c1ead74b2e383d1d799ee38899d ""
-  "principal.aux" 1770357449.03033 5865 23d1355701360e622aa6abab87f2e0b0 "pdflatex"
-  "principal.bbl" 1770357446.15075 637 34d0d57488edb367513743be65beb5ab "bibtex principal"
-  "principal.out" 1770357449.03033 3170 d96ce3dd8617dece8cb837be0672bbcf "pdflatex"
+  "principal.aux" 1770404359.06163 6291 1b8d323ad50ce9352d4b803fbffc8975 "pdflatex"
+  "principal.bbl" 1770404356.29887 1157 ea80e03b91abed40b1d633dbeaa73c03 "bibtex principal"
+  "principal.out" 1770404359.06163 3411 2b58fda1402343d57ff7d8ed333852c1 "pdflatex"
   "principal.tex" 1770357338.46676 11838 3e0a52f3c6d5a1b7eb41d461b9cc8c52 ""
-  "principal.toc" 1770357449.03033 1484 9fe927212126beae3c9bfdb98eea47d0 "pdflatex"
-  "realizacoes.tex" 1770356816.66589 9561 3903fff151b0c877e15af976908d1ccd ""
+  "principal.toc" 1770404359.06163 1589 da31790236b3b308ecddcfaff191f6f3 "pdflatex"
+  "realizacoes.tex" 1770404287.12365 11473 4326dfd52c4a9eb8e914413a26a65dcb ""
   "rest.tex" 1770356917.46279 3996 935b1ad4aa56fd04bb0902d5f862a453 ""
   (generated)
   "principal.aux"

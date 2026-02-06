@@ -9,12 +9,13 @@
 \contentsline {chapter}{\numberline {1}Realizações no período}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Atividades Acadêmicas}{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Atividades de Pesquisa}{2}{section.1.2}%
-\contentsline {subsection}{\numberline {1.2.1}Revisão Bibliográfica}{2}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.1}Definição do Problema e Notação}{2}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Revisão Bibliográfica}{2}{subsection.1.2.2}%
 \contentsline {section}{\numberline {1.3}Desenvolvimento Algorítmico e Experimental}{2}{section.1.3}%
-\contentsline {subsection}{\numberline {1.3.1}Estratégias Avançadas de Validação Cruzada}{2}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.1}Estratégias Avançadas de Validação Cruzada}{3}{subsection.1.3.1}%
 \contentsline {subsection}{\numberline {1.3.2}Integração Híbrida e Escalamento Dinâmico}{3}{subsection.1.3.2}%
-\contentsline {subsection}{\numberline {1.3.3}Resultados Preliminares}{3}{subsection.1.3.3}%
-\contentsline {chapter}{\numberline {2}Descrição e avaliação do apoio institucional recebido no período}{5}{chapter.2}%
-\contentsline {chapter}{\numberline {3}Participação em evento científico}{6}{chapter.3}%
-\contentsline {chapter}{\numberline {4}Plano de atividades para o próximo período}{7}{chapter.4}%
-\contentsline {chapter}{Referências Bibliográficas}{7}{Item.6}%
+\contentsline {subsection}{\numberline {1.3.3}Resultados Preliminares}{4}{subsection.1.3.3}%
+\contentsline {chapter}{\numberline {2}Descrição e avaliação do apoio institucional recebido no período}{6}{chapter.2}%
+\contentsline {chapter}{\numberline {3}Participação em evento científico}{7}{chapter.3}%
+\contentsline {chapter}{\numberline {4}Plano de atividades para o próximo período}{8}{chapter.4}%
+\contentsline {chapter}{Referências Bibliográficas}{8}{Item.6}%
