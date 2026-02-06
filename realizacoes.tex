@@ -44,12 +44,9 @@ Para impor essa esparsidade, abordamos o problema de regularização $\ell_0$:
 \end{equation}
 onde $\|x\|_0$ denota a pseudo-norma $\ell_0$ (cardinalidade do suporte de $x$) e $\lambda > 0$ é o parâmetro de regularização que controla o balanço entre o erro de ajuste e a esparsidade da solução.
 
-\subsubsection{Notação}
 Durante o texto, utilizamos a seguinte notação:
 \begin{itemize}
     \item $[p] \coloneq \{1, 2, \ldots, p\}$;
-    \item Para um conjunto de índices $T \subset [p]$, $x_T \in \mathbb{R}^{|T|}$ denota o subvetor de $x$ restrito aos índices em $T$;
-    \item Similarmente, $A_T$ denota a submatriz contendo apenas as colunas de $A$ indexadas por $T$;
     \item O suporte do vetor $x$ é denotado por $\text{supp}(x) = \{i \in [p] : x_i \neq 0\}$.
 \end{itemize}
 
@@ -101,7 +98,7 @@ A qualidade da solução recuperada é medida pela métrica de Similaridade do S
         \caption{Tempo de Execução (s).}
         \label{fig:results_time}
     \end{minipage}
-    \caption{Comparação entre o método proposto (PGCCD/NSPG) e o estado da arte (L0Learn variants) em cenário de correlação exponencial ($\rho=0.5, p=2000, n=500, k^{\dagger}=100, \text{SNR}=10$). Os métodos propostos atingem recuperação de suporte superior ou equivalente com tempos competitivos.}
+    \caption{Comparação entre o método proposto (PGCCD/NSPG) e o estado da arte (L0Learn variants) em cenário de correlação exponencial ($\rho=0.5,\ p=2000,\ n=500,\ k^{\dagger}=100,\ \text{SNR}=10$). Os métodos propostos atingem recuperação de suporte superior ou equivalente com tempos competitivos.}
     \label{fig:results_comp_exp}
 \end{figure}
 
@@ -121,8 +118,8 @@ Além do cenário exponencial, avaliamos o desempenho em configurações de corr
         \caption{Tempo de Execução (s).}
         \label{fig:results_time_const}
     \end{minipage}
-    \caption{Desempenho em cenário de correlação constante ($\rho=0.9, p=1000, n=250, k^{\dagger}=20, \text{SNR}=5$). Neste regime de alta correlação e ruído mais acentuado, os métodos propostos demonstram superioridade marcante na qualidade da solução recuperada em comparação com as alternativas, mantendo a eficiência computacional.}
+    \caption{Desempenho em cenário de correlação constante ($\rho=0.9,\ p=1000,\ n=250,\ k^{\dagger}=20,\ \text{SNR}=5$). Neste regime de alta correlação e ruído mais acentuado, os métodos propostos demonstram superioridade marcante na qualidade da solução recuperada em comparação com as alternativas, mantendo a eficiência computacional.}
     \label{fig:results_comp_const}
 \end{figure}
 
-Os resultados ilustrados nas Figuras \ref{fig:results_comp_exp} e \ref{fig:results_comp_const} indicam a robustez da combinação proposta. Em cenários desafiadores de ruído considerável e alta correlação entre os parâmetros — seja ela exponencial ou constante — a abordagem híbrida supera ou iguala o estado da arte (L0Learn) em termos de qualidade da solução recuperada e tempo de execução.
+Os resultados ilustrados nas Figuras \ref{fig:results_comp_exp} e \ref{fig:results_comp_const} indicam a robustez da combinação proposta. Em cenários desafiadores de ruído considerável e alta correlação entre os parâmetros — seja ela exponencial ou constante — a abordagem híbrida supera ou iguala o estado da arte (L0Learn) em termos de qualidade da solução recuperada. Cabe ressaltar que, embora o híbrido NSPG+PGCCD possa ser mais lento para valores superiores de $n$, ele atinge recuperação perfeita em regimes de $n$ pequeno, onde seu tempo de execução permanece competitivo, oferecendo uma alternativa valiosa para cenários de dados limitados.
