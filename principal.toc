@@ -1,0 +1,21 @@
+\babel@toc {portuguese}{}\relax 
+\contentsline {chapter}{Informações Gerais do Projeto}{i}{chapter*.1}%
+\babel@toc {portuguese}{}\relax 
+\contentsline {chapter}{Resumo}{ii}{chapter*.1}%
+\babel@toc {portuguese}{}\relax 
+\babel@toc {english}{}\relax 
+\contentsline {chapter}{Abstract}{iii}{chapter*.1}%
+\babel@toc {portuguese}{}\relax 
+\contentsline {chapter}{\numberline {1}Resumo do projeto proposto}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Realizações no período}{2}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Atividades Acadêmicas}{2}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Atividades de Pesquisa}{3}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Revisão Bibliográfica}{3}{subsection.2.2.1}%
+\contentsline {section}{\numberline {2.3}Desenvolvimento Algorítmico e Experimental}{3}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Estratégias Avançadas de Validação Cruzada}{3}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Integração Híbrida e Escalamento Dinâmico}{4}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Resultados Preliminares}{4}{subsection.2.3.3}%
+\contentsline {chapter}{\numberline {3}Descrição e avaliação do apoio institucional recebido no período}{6}{chapter.3}%
+\contentsline {chapter}{\numberline {4}Participação em evento científico}{7}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Plano de atividades para o próximo período}{8}{chapter.5}%
+\contentsline {chapter}{Referências Bibliográficas}{8}{Item.6}%

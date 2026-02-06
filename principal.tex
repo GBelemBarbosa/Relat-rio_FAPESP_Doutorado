@@ -1,0 +1,267 @@
+%LTeX: language=pt-BR
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% In English:
+%    This is a Latex template for São Paulo Research Foudation (FAPESP)
+%         reports (annual or final).
+%    This is the modified version of the original Latex template from
+%         following website.
+%    Original Source: http://www.howtotex.com
+%    For information about FAPESP, check http://www.fapesp.br/en
+%    This template targets mainly on reports in Portuguese language.
+%    New additions and changes in the latest version:
+%        - Added the possibility of including multiple members in the 
+%          research team, with the commands \memberA{Name of Member A} 
+%          \memberB{Name of Member B} \memberC{Name of Member C} etc.
+%        - Included commands to define project modality and the research 
+%          agency (if you want to use the same model for other research 
+%          agencies such as CAPES, CNPq etc).
+%
+% In Portuguese:
+%    Este é um modelo Latex para relatórios (anual ou final) da Fundação 
+%         de Amparo à pesquisa do Estado de São Paulo (FAPESP).
+%    Esta é uma versão modificada do modelo Latex do site supra mencionado.
+%    Para informações sobre a FAPESP, verifique http://www.fapesp.br
+%    Esse modelo foca principalmente nos relatórios escritos em Português.
+%    Novas adições e alterações na última versão:
+%       - Foi adicionada a possibilidade de incluir vários membros no 
+%         grupo de pesquisas, com os comandos \membroA{Nome do Membro A} 
+%         \membroB{} \membroC{} etc.
+%       - Foram incluídos comandos para definir modalidade de projeto e
+%         agência de fomento (caso queira utilizar o mesmo modelo para 
+%         outras agências, CAPES, CNPq etc).
+%
+% Author/Autor: André Leon Sampaio Gradvohl, Dr.
+% Email:        andre.gradvohl@gmail.com
+% Lattes CV:    http://lattes.cnpq.br/9343261628675642
+% GitHub: http://gradvohl.github.io/
+% 
+% Last update/Última versão: 19/Feb/2018
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt]{report}
+\usepackage[a4paper]{geometry}
+\usepackage[english,portuguese]{babel}
+\usepackage[myheadings]{fullpage}
+\usepackage[T1]{fontenc}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{sectsty}
+%\usepackage{url}
+
+%\PassOptionsToPackage{dvipsnames}{xcolor}
+%\usepackage{listingsutf8}
+\usepackage{mathptmx}
+\DeclareMathAlphabet{\mathcal}{OMS}{cmsy}{m}{n}
+\usepackage{amsthm}
+\usepackage{microtype}
+\usepackage{listings}
+\usepackage[shortlabels]{enumitem}
+\usepackage{amsmath}
+%\usepackage{comment}
+\usepackage{index}
+\usepackage{makecell}
+\usepackage{wrapfig}
+%\numberwithin{equation}{section}
+\usepackage{float}
+\usepackage{hyperref} %\usepackage[hyphens]{url}
+\usepackage{algorithm}
+\usepackage[table]{xcolor}
+\usepackage{authblk}
+\usepackage{algpseudocode}
+\usepackage{tikz}
+\usepackage{amssymb}
+\usepackage{nicematrix}
+\usepackage{mathtools}
+\usepackage{xcolor}
+\usepackage{subfig}
+\usepackage{soul}
+\usepackage{thmtools}
+\usepackage{bm}
+%\usepackage{pstricks,pstricks-add}
+\usepackage{tabto}
+\usetikzlibrary{patterns,decorations.pathreplacing}
+\graphicspath{{images/}}
+
+\hypersetup{linkcolor=black}
+
+\newtheorem{theorem}{Teorema}%[chapter]
+\newtheorem{lemma}{Lema}%[chapter]
+\providecommand*{\lemmaautorefname}{Lema}
+\newtheorem{assumption}{Hipótese}%[chapter]
+\providecommand*{\assumptionautorefname}{Hipótese}
+\newtheorem{proposition}{Proposição}%[chapter]
+\providecommand*{\propositionautorefname}{Proposição}
+\newtheorem{corollary}{Corolário}%[chapter]
+\providecommand*{\corollaryautorefname}{Corolário}
+\newtheorem{conjecture}{Conjectura}%[chapter]
+\providecommand*{\conjectureautorefname}{Conjectura}
+\newtheorem{definition}{Definição}%[chapter]
+\providecommand*{\definitionautorefname}{Definição}
+\newtheorem{notation}{Notação}%[chapter]
+\providecommand*{\notationautorefname}{Notação}
+\newtheorem{remark}{Observação}%[chapter]
+\providecommand*{\remarkautorefname}{Observação}
+\newtheorem{exmp}{Exemplo}%[chapter]
+\providecommand*{\exampleautorefname}{Exemplo}
+\newtheorem{note}{Nota}%[chapter]
+\providecommand*{\noteautorefname}{Nota}
+\providecommand*{\algorithmautorefname}{Algoritmo}
+\addto\extrasbrazil{
+    \def\sectionautorefname{Seção}
+}
+\addto\extrasbrazil{
+    \def\subsectionautorefname{Subseção}
+}
+\renewcommand*{\chapterautorefname}{Capítulo}
+\renewcommand*{\partautorefname}{Parte}
+\renewcommand*{\figureautorefname}{Figura}
+
+\newcommand*\R{\mathbb{R}}
+\newcommand*\X{\mathbb{X}}
+\newcommand{\hquad}{\mkern3mu}
+\newcommand*\C{\mathbb{C}}
+\newcommand*\N{\mathbb{N}}
+\newcommand*\K{\mathbb{K}}
+\newcommand*\x{\mathbf{x}}
+\newcommand*\D{\mathbf{d}}
+\newcommand*\bv{\mathbf{b}}
+\newcommand*\U{\mathbf{u}}
+\newcommand*\y{\mathbf{y}}
+\newcommand*\z{\mathbf{z}}
+\newcommand*\V{\mathbf{v}}
+\newcommand*\s{\mathbf{s}}
+\newcommand*\A{\mathbf{A}}
+\newcommand*\prox{\operatorname{prox}}
+\newcommand{\sumover}[2]{\sum \limits_{#1}^{#2}}
+%\renewcommand{\qedsymbol}{{$\blacksquare$}}
+\newcommand*{\norm}[1]{\| #1 \|}
+\newcommand*{\inner}[1]{\langle #1 \rangle}
+\newcommand*{\modu}[1]{| #1 |}
+\newcommand{\vecspace}[3][]{(#2,\norm{#3}_{#1})}
+
+\algnewcommand{\Input}[1]{\textbf{Input:} #1}
+\algnewcommand{\Output}[1]{\textbf{Output:} #1}
+\newcommand\algoIndent[1]{%
+  \linebreak\hspace*{\dimexpr\algorithmicindent*#1}\hspace*{-0.33em}%
+}
+%\algdef{SE}[DOWHILE]{Do}{doWhile}{\algorithmicdo}{\algorithmicwhile\ }%
+%%------ 
+%% Comandos gerais
+%% Observação: o arquivo "comandos.tex" tem que estar presente.
+%%------
+
+
+\providecommand*{\subfigureautorefname}{Subfigura}
+
+\renewcommand*{\listalgorithmname}{Lista de algoritmos}
+\input{comandos}
+%
+%%-----
+%% Página de título
+%% Observação: As definições que aparecem a seguir comporão a
+%%             página de título e a folha de rosto.
+%%-----
+%% Define o nome da universidade onde o projeto foi desenvolvido.
+\universidade{Universidade Estadual de Campinas}
+%
+%% Define o nome da faculdade onde o projeto foi desenvolvido.
+\faculdade{Departamento de Matemática Aplicada, Instituto de Matemática, Estatística e Computação Científica}
+%
+%
+%% Define o título do projeto.
+\titulo{Métodos de segunda ordem para problemas compósitos descontínuos}
+%
+%% Define a agencia de Fomento e a abreviatura. O primeiro argumento é o 
+%% nome por extenso e o segundo a abreviatura.
+%% Ambos os argumentos são obrigatórios
+\agFomento{Fundação de Amparo à Pesquisa do Estado de São Paulo}{FAPESP}
+%
+%% Define o tipo de relatório. Pode ser Anual ou Final.
+%% Não é obrigatório definir o tipo de relatório.
+\tipoRelatorio{Primeiro Relatório Científico Anual}
+%
+%% Define a modalidade de Projeto. Pode ser temático, regular, etc.
+\modalidadeProjeto{Bolsa no País - Doutorado}
+%
+%% Define o número do projeto.
+%% Não é obrigatório definir o número do projeto.
+%
+%% Define o número do projeto.
+%% Não é obrigatório definir o número do projeto.
+\numProjeto{2024/20168-8} 
+%
+%% Define o autor do relatório.
+\autor{Paulo José da Silva e Silva \\ Doutorando: Gabriel Belém Barbosa}
+%
+%% Define a equipe do projeto (incluindo o pesquisador responsável no comando \membroA{}
+\membroA{Paulo José da Silva e Silva}
+%% Inclua os demais membros do grupo (máximo +5)
+\membroB{Gabriel Belém Barbosa}
+%\membroC{Francisco}
+%\membroD{Joao}
+%\membroE{Antonio}
+%\membroF{José}
+%
+%% Define o período da vigência do Projeto.
+\periodoVigencia{01/03/2025 a 28/02/2026}
+%
+%% Define o período coberto pelo relatório.
+\periodoRelatorio{01/03/2025 a 28/02/2029}
+%
+%% Define a cidade onde o projeto foi desenvolvido.
+\cidade{Campinas}
+
+%%-----
+%% Página de título
+%% Observação: Os comandos a seguir não devem ser mudados, 
+%%             exceto caso necessário.
+%%-----
+\begin{document}
+%
+%% Define a numeração em romanos.
+\pagenumbering{roman}
+%
+%% Gera a folha de título.
+\geraTitulo
+%
+%% Gera a folha de rosto.
+\folhaDeRosto
+%
+%% Escreva aqui o resumo em português.
+\Resumo{
+  Este projeto visa investigar e avançar no campo da otimização compósita não convexa, focando na recente incorporação de informação de segunda ordem nos modelos iterativos. Duas referências recentes se destacam nessa área: \textit{Forward-backward envelope for the sum of two nonconvex functions: further properties and nonmonotone line-search algorithms} [Themeles 2018] e \textit{The Indefinite Proximal Gradient Method} [Leconte 2024]. Vários problemas do mundo real, incluindo recuperação de sinal esparso, processamento de imagem e otimização de portfólio, podem ser modelados na forma do problema de interesse. Esse trabalho também envolverá extensa experimentação numérica em várias classes de problemas para avaliar o desempenho dos algoritmos propostos. Os experimentos se concentrarão em comparar o desempenho de diferentes estratégias de busca linear sob diferentes hipóteses, especialmente estratégias não monótonas, o impacto da incorporação de informações quasi-Newton nos modelos do subproblema e a eficácia de cada atualização. Possivelmente novas estratégias híbridas também serão analisadas. O projeto pretende avançar no entendimento de métodos como o ZeroFPR [Themeles 2018] e de gradiente proximal indefinido [Leconte 2024] no tratamento de problemas de otimização compósita não convexa, fornecer orientação prática na seleção de estratégias de busca linear adequadas e atualizações quasi-Newton para diferentes estruturas de problema e desenvolver algoritmos eficientes e robustos para resolver uma classe mais ampla de problemas de otimização compósita não convexa, levando potencialmente a soluções aprimoradas em importantes áreas de aplicação.
+  }
+%
+%% Escreva aqui o resumo em inglês.
+\Abstract{
+ This project aims to investigate and advance the field of nonconvex composite optimization, focusing on the recent incorporation of second-order information into iterative models. Two recent sources stand out in this area: \textit{Forward-backward envelope for the sum of two nonconvex functions: further properties and nonmonotone line-search algorithms} [Themeles 2018] and \textit{The Indefinite Proximal Gradient Method} [Leconte 2024]. Several real-world problems, including sparse signal recovery, image processing, and portfolio optimization, can be modeled in the form of the problem of interest. This work will also involve extensive numerical experimentation on several types of problems to evaluate the performance of the proposed algorithms. The experiments will focus on comparing the performance of different line search strategies with or without relaxed assumptions, especially nonmonotone variants, the impact of incorporating quasi-Newton information into the subproblem and the effectiveness of each update. New hybrid strategies also possibly will be analysed. The project aims to contribute to advance the understanding of methods such as ZeroFPR [Themeles 2018] and indefinite proximal gradient [Leconte 2024] in the treatment of non-convex composite optimization problems, to provide practical guidance in the selection of appropriate line search strategies and quasi-Newton updates for different problem structures, and to develop efficient and robust algorithms to solve a broader class of non-convex composite optimization problems, potentially leading to improved solutions in important application areas.
+}
+%
+%% Adicionará o sumário.
+%% Mantenha o \thispagestyle{empty} e \clearpage
+\tableofcontents
+\thispagestyle{empty}
+\clearpage
+%
+%% Define a numeração em arábicos.
+\pagenumbering{arabic}
+
+%%-----
+%% Formatação do título da seção
+%%-----
+\sectionfont{\scshape}
+
+%%-----
+%% Corpo do texto
+%%-----
+\input{resumo}
+
+\input{realizacoes}
+
+\input{rest}
+
+%%-----
+%% Fim do documento
+%%-----
+\end{document}
