@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.18)  6 FEB 2026 02:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.18)  6 FEB 2026 02:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1046,7 +1046,7 @@ l.229 \folhaDeRosto
 ] [2
 
 ] [3] (./principal.toc
-LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line 11.
+LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line 10.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
@@ -1054,28 +1054,28 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `ztmcm' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line 11.
+LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line 10.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlztmcm.fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
-LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line 11.
+LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line 10.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsztmcm.fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
-LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line 11.
+LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line 10.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omxztmcm.fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
-LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 11.
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 10.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 11.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 10.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 11.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 10.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 11.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 10.
  (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 ) (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg
@@ -1091,49 +1091,45 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has b
 l.245 \clearpage
                  [1
 
-] (./resumo.tex
+] (./realizacoes.tex
 Cap\'{\i }tulo 1.
-) (./realizacoes.tex [1
+[1
 
 
-]
-Cap\'{\i }tulo 2.
-[2
-
-] [3]
-<images/mixed_sim.png, id=139, 3613.5pt x 2409.0pt>
+] [2]
+<images/mixed_sim.png, id=127, 3613.5pt x 2409.0pt>
 File: images/mixed_sim.png Graphic file (type png)
 <use images/mixed_sim.png>
 Package pdftex.def Info: images/mixed_sim.png  used on input line 72.
 (pdftex.def)             Requested size: 217.42265pt x 144.9381pt.
-<images/mixed_time.png, id=140, 3613.5pt x 2409.0pt>
+<images/mixed_time.png, id=128, 3613.5pt x 2409.0pt>
 File: images/mixed_time.png Graphic file (type png)
 <use images/mixed_time.png>
 Package pdftex.def Info: images/mixed_time.png  used on input line 78.
 (pdftex.def)             Requested size: 217.42265pt x 144.9381pt.
-<images/const_sim.png, id=142, 3613.5pt x 2409.0pt>
+<images/const_sim.png, id=130, 3613.5pt x 2409.0pt>
 File: images/const_sim.png Graphic file (type png)
 <use images/const_sim.png>
 Package pdftex.def Info: images/const_sim.png  used on input line 92.
 (pdftex.def)             Requested size: 217.42265pt x 144.9381pt.
-<images/const_time.png, id=143, 3613.5pt x 2409.0pt>
+<images/const_time.png, id=131, 3613.5pt x 2409.0pt>
 File: images/const_time.png Graphic file (type png)
 <use images/const_time.png>
 Package pdftex.def Info: images/const_time.png  used on input line 98.
 (pdftex.def)             Requested size: 217.42265pt x 144.9381pt.
-) (./rest.tex [4] [5 <./images/mixed_sim.png> <./images/mixed_time.png> <./images/const_sim.png> <./images/const_time.png>]
+) (./rest.tex [3] [4 <./images/mixed_sim.png> <./images/mixed_time.png> <./images/const_sim.png> <./images/const_time.png>]
+Cap\'{\i }tulo 2.
+[5
+
+]
 Cap\'{\i }tulo 3.
 [6
 
 ]
 Cap\'{\i }tulo 4.
-[7
+(./principal.bbl [7
 
-]
-Cap\'{\i }tulo 5.
-(./principal.bbl [8
-
-])) [9
+])) [8
 
 ] (./principal.aux)
  ***********
@@ -1141,21 +1137,21 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 Package rerunfilecheck Info: File `principal.out' has not changed.
-(rerunfilecheck)             Checksum: AC2A53B9968768E73E5E4D3927CA0369;3353.
+(rerunfilecheck)             Checksum: D96CE3DD8617DECE8CB837BE0672BBCF;3170.
  ) 
 Here is how much of TeX's memory you used:
- 33733 strings out of 474222
- 646539 string characters out of 5748732
+ 33715 strings out of 474222
+ 646326 string characters out of 5748732
  1935975 words of memory out of 5000000
- 55052 multiletter control sequences out of 15000+600000
- 628606 words of font info for 281 fonts, out of 8000000 for 9000
+ 55045 multiletter control sequences out of 15000+600000
+ 628251 words of font info for 277 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,11n,93p,1818b,629s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1440.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on principal.pdf (14 pages, 1301874 bytes).
+Output written on principal.pdf (13 pages, 1300077 bytes).
 PDF statistics:
- 237 PDF objects out of 1000 (max. 8388607)
- 195 compressed objects within 2 object streams
- 40 named destinations out of 1000 (max. 500000)
- 64161 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 225 PDF objects out of 1000 (max. 8388607)
+ 184 compressed objects within 2 object streams
+ 38 named destinations out of 1000 (max. 500000)
+ 64153 words of extra memory for PDF output out of 74296 (max. 10000000)
 
