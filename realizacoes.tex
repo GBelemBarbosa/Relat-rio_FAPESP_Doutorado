@@ -29,11 +29,31 @@ No âmbito das exigências do programa de Doutorado em Matemática Aplicada do I
 
 \section{Atividades de Pesquisa}
 
-As atividades de pesquisa concentraram-se na investigação e aprimoramento de métodos de segunda ordem para otimização compósita não convexa, com ênfase no problema de regularização $\ell_0$:
-\begin{equation}
-    \min_{x \in \mathbb{R}^n} f(x) + \lambda \|x\|_0,
+As atividades de pesquisa concentraram-se na investigação e aprimoramento de métodos de segunda ordem para otimização compósita não convexa.
+
+\subsection{Definição do Problema e Notação}
+Considere o problema de regressão linear com ruído:
+\begin{equation} \label{P} \tag{P}
+    b = Ax + \epsilon,
 \end{equation}
-onde $f(x)$ é uma função suave (perda quadrática ou logística) e $\lambda > 0$ é o parâmetro de regularização.
+onde $b \in \mathbb{R}^n$ é o vetor resposta e $A \in \mathbb{R}^{n \times p}$ é a matriz de desenho. O objetivo é recuperar o vetor de coeficientes $x \in \mathbb{R}^p$, assumindo que a solução verdadeira é esparsa (poucos coeficientes não nulos), uma hipótese comum e desejável em cenários onde $p \gg n$.
+
+Para impor essa esparsidade, abordamos o problema de regularização $\ell_0$:
+\begin{equation} \label{R} \tag{R}
+    \min_{x \in \mathbb{R}^p} \frac{1}{2} \|Ax - b\|_2^2 + \lambda \|x\|_0,
+\end{equation}
+onde $\|x\|_0$ denota a pseudo-norma $\ell_0$ (cardinalidade do suporte de $x$) e $\lambda > 0$ é o parâmetro de regularização que controla o balanço entre o erro de ajuste e a esparsidade da solução.
+
+\subsubsection{Notação}
+Durante o texto, utilizamos a seguinte notação:
+\begin{itemize}
+    \item $[p] \coloneq \{1, 2, \ldots, p\}$;
+    \item Para um conjunto de índices $T \subset [p]$, $x_T \in \mathbb{R}^{|T|}$ denota o subvetor de $x$ restrito aos índices em $T$;
+    \item Similarmente, $A_T$ denota a submatriz contendo apenas as colunas de $A$ indexadas por $T$;
+    \item O suporte do vetor $x$ é denotado por $\text{supp}(x) = \{i \in [p] : x_i \neq 0\}$.
+\end{itemize}
+
+O problema \eqref{R} é NP-difícil, o que motiva o desenvolvimento de algoritmos que combinem a eficiência de métodos contínuos com a qualidade de soluções de métodos combinatoriais.
 
 Os principais avanços incluem:
 
