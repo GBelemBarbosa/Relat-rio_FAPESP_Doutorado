@@ -63,6 +63,8 @@ Essa técnica é fundamental para a estratégia híbrida desenvolvida, que combi
 \subsection{Resultados Preliminares}
 Para validar a eficácia dos métodos, utilizamos dados sintéticos gerados segundo o modelo linear $y = Ax + \epsilon$, onde $n$ denota o número de amostras, $p$ o número de parâmetros (variáveis) e $k^\dagger$ o tamanho do suporte da verdade terrestre (\textit{ground truth}). A matriz de dados $A$ possui colunas normalizadas e estrutura de correlação controlada pelo parâmetro $\rho$ (correlação entre variáveis adjacentes com decaimento exponencial ou correlação constante). O nível de ruído é determinado pelo \textit{Signal to Noise Ratio} (SNR), que varia de acordo com a dificuldade do cenário analisado.
 
+A qualidade da solução recuperada é medida pela métrica de Similaridade do Suporte (Jaccard Modificado), definida como $J(S, S^\dagger) = \frac{|S \cap S^\dagger|}{|S \cup S^\dagger|}$, onde $S$ é o suporte estimado pelo algoritmo e $S^\dagger$ é o suporte verdadeiro. Esta métrica varia de 0 (disjunção total) a 1 (recuperação perfeita).
+
 \begin{figure}[ht]
     \centering
     \begin{minipage}{0.48\textwidth}
