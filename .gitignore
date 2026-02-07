@@ -1,7 +1,6 @@
 *.aux
 *.log
 *.out
-*.pdf
 *.synctex.gz
 *.toc
 *.bbl
@@ -13,3 +12,4 @@
 *.lof
 *.bcf
 *.xml
+*:Zone.Identifier
