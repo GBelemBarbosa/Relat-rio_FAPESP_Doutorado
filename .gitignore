@@ -8,4 +8,8 @@
 *.blg
 *.fdb_latexmk
 *.fls
-images/*.aux
+*.synctex(busy)
+*.lot
+*.lof
+*.bcf
+*.xml
