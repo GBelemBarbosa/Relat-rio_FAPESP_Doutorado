@@ -52,10 +52,10 @@ Durante o texto, utilizamos a seguinte notação:
 
 O problema \eqref{R} é NP-difícil \cite{fastselect}, o que motiva o desenvolvimento de algoritmos que combinem a eficiência de métodos contínuos com a qualidade de soluções de métodos combinatoriais.
 
-Os principais avanços incluem:
+Os principais avanços são descritos nas seções a seguir.
 
 \subsection{Revisão Bibliográfica}
-Estudo aprofundado das referências centrais e do estado da arte:
+Estudo aprofundado de referências centrais e do estado da arte:
 \begin{itemize}
     \item \textit{Sparse regression at scale: branch-and-bound rooted in first-order optimization} \cite{mio};
     \item \textit{First-Order Methods in Optimization} \cite{beckbook};
@@ -63,14 +63,16 @@ Estudo aprofundado das referências centrais e do estado da arte:
 \end{itemize}
 
 \section{Desenvolvimento Algorítmico e Experimental}
-Foi realizada uma extensa campanha de experimentos e desenvolvimentos teóricos no ambiente \texttt{Julia}, focada na robustez e eficiência dos algoritmos para o problema de seleção de variáveis. As principais contribuições são detalhadas a seguir.
+Foram realizados vários experimentos computacionais no ambiente \texttt{Julia}, bem como desenvolvimentos teóricos, focados na robustez e eficiência dos algoritmos para o problema de seleção de variáveis. As principais contribuições são detalhadas a seguir.
 
 \subsection{Estratégias Avançadas de Validação Cruzada}
 Implementamos e comparamos novas estratégias de Validação Cruzada (Cross-Validation - CV) para a seleção do hiperparâmetro $\lambda$ ao longo do caminho de regularização. A escolha adequada de $\lambda$ é fundamental para o desempenho do modelo, pois controla o equilíbrio entre o ajuste aos dados e a esparsidade da solução. Em cenários reais, onde o suporte verdadeiro é desconhecido, o erro de validação (erro de predição em um conjunto de dados não utilizado no treinamento) serve como critério para identificar o modelo que melhor generaliza.
 
-Nosso objetivo com essas estratégias é mitigar a convergência para mínimos locais ruins. Essa estratégia é particularmente essencial em contextos nos quais a esparsidade da verdade base (\textit{ground truth}) não é conhecida, como em problemas de seleção de variáveis em aprendizado de máquina.
+Nosso objetivo com essas estratégias é mitigar a convergência para mínimos locais ruins. Essa estratégia é particularmente essencial em contextos nos quais a esparsidade da solução original não é conhecida, como em problemas de seleção de variáveis em aprendizado de máquina.
 
-A primeira abordagem desenvolvida, denominada \emph{CV Inverso}, inverte a lógica padrão de percorrer o caminho de regularização. Ao invés de iniciar com $\lambda_{high}$ (solução esparsa) e relaxar a penalidade, esta estratégia percorre o caminho de $\lambda_{low}$ a $\lambda_{high}$, iniciando de soluções mais densas após uma fase de inicialização (\textit{warmup}). 
+A abordagem padrão na literatura (e em pacotes como L0Learn e GLMNet) é percorrer o caminho de regularização de $\lambda_{high}$ (solução esparsa) para $\lambda_{low}$ (solução densa), utilizando a solução anterior como ponto de partida (\textit{warmup}). No entanto, em problemas não convexos como a regularização $\ell_0$, essa estratégia gananciosa pode ficar presa precocemente em mínimos locais subótimos.
+
+Para contornar isso, a primeira modificação desenvolvida, denominada \emph{CV Inverso}, inverte a lógica padrão. Esta estratégia percorre o caminho de $\lambda_{low}$ a $\lambda_{high}$, iniciando de soluções mais densas. A intuição é que, ao permitir que mais variáveis entrem no modelo inicialmente (devido à menor penalização), o algoritmo pode explorar melhor o espaço de busca combinatorial antes de ser forçado a esparsificar a solução, potencialmente encontrando suportes de melhor qualidade que seriam ignorados pela abordagem padrão. 
 
 Além disso, desenvolvemos o \emph{CV Adaptativo Inteligente}, uma abordagem híbrida que sonda os erros de validação nos dois extremos do intervalo de $\lambda$ e seleciona a melhor direção de varredura. O algoritmo permite ainda uma única reversão de direção caso detecte uma melhora significativa no erro de validação (maior que 1\%), permitindo explorar vales de mínimos locais que seriam ignorados por varreduras monotônicas rígidas. Esse critério também permite que o método termine mais rapidamente sem varrer por completo o intervalo de possíveis valores de $\lambda$, por vezes superando a padrão ou a inversa em velocidade.
 
